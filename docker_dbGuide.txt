@@ -1,0 +1,40 @@
+python3 -m venv .venv  
+source .venv/bin/activate
+pip freeze > requirements.txt
+docker compose up -d
+docker-compose exec db mysql -uroot -p -P36000
+docker-compose exec mysql mysql -uroot -p -P36000
+CREATE DATABASE db_hosts;
+USE db_hosts;
+#Create the t_end_device and t_iot_device tables:
+CREATE TABLE t_end_device (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ip VARCHAR(255) NOT NULL,
+    description VARCHAR(255)
+);
+
+CREATE TABLE t_iot_device (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    mac VARCHAR(255) NOT NULL,
+    temp FLOAT
+);
+#put values on tables :
+INSERT INTO t_end_device (ip, description) VALUES
+    ('192.168.1.1', 'PC1'),
+    ('192.168.1.2', 'Printer1'),
+    ('192.168.1.3', 'Switch1');
+INSERT INTO t_iot_device (mac, temp) VALUES
+    ('00:11:22:33:44:55', 25.5),
+    ('AA:BB:CC:DD:EE:FF', 28.0),
+    ('11:22:33:44:55:66', 23.3);
+
+#to push in github 
+git push -u origin main  
+
+# for flask auth app :
+->cd flask_auth_app
+->python3 -m venv auth
+->source auth/bin/activate
+->export FLASK_APP=project
+->export FLASK_DEBUG=1
+->flask run 

@@ -1,0 +1,78 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Shared styles for the admin dashboard */
+.admin-dashboard {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Styles for the tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Styles for the client details and list client pages */
+.client-details {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Styles for the forms */
+form {
+    margin-top: 20px;
+}
+
+/* Navigation links */
+.nav-link {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
