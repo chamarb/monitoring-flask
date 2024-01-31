@@ -26,16 +26,17 @@
             <tbody>
                 {% for end_device in end_devices %}
                     <tr>
-                        <td>{{ end_device.id }}</td>
-                        <td>{{ end_device.name }}</td>
-                        <td>{{ end_device.ip }}</td>
-                        <td>{{ end_device.mac }}</td>
-                        <td>{{ end_device.longitude }}</td>
-                        <td>{{ end_device.latitude }}</td>
+                        <td>{{ end_device[0] }}</td>
+                        <td>{{ end_device[1] }}</td>
+                        <td>{{ end_device[2] }}</td>
+                        <td>{{ end_device[3] }}</td>
+                        <td>{{ end_device[4] }}</td>
+                        <td>{{ end_device[5] }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
+        <a href="/"><button class="btn btn-primary">Back</button></a>
 
         <!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

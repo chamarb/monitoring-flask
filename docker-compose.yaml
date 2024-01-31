@@ -10,6 +10,11 @@ services:
       - db
     volumes:
       - .:/app
+      - .:/app/flask_auth_app
+    command: >
+      bash -c "cd /app/flask_auth_app &&
+                export FLASK_APP=main.py &&
+                flask run --host=0.0.0.0 --port=8080"
   db:
     image: mysql
     container_name: mysql

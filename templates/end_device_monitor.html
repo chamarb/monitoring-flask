@@ -12,12 +12,12 @@
         <h1 class="mb-4">End Device Monitor</h1>
 
         <!-- Display end device details for reference -->
-        <p>End Device ID: {{ end_device.id }}</p>
-        <p>Name: {{ end_device.name }}</p>
-        <p>IP Address: {{ end_device.ip }}</p>
-        <p>MAC Address: {{ end_device.mac }}</p>
-        <p>Longitude: {{ end_device.longitude }}</p>
-        <p>Latitude: {{ end_device.latitude }}</p>
+        <p>End Device ID: {{ end_device[0] }}</p>
+        <p>Name: {{ end_device[1] }}</p>
+        <p>IP Address: {{ end_device[2] }}</p>
+        <p>MAC Address: {{ end_device[3] }}</p>
+        <p>Longitude: {{ end_device[4] }}</p>
+        <p>Latitude: {{ end_device[5] }}</p>
 
         <!-- Display CPU load information -->
         <p>CPU Load: {{ cpu_load }}</p>

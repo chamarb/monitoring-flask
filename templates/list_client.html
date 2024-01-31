@@ -22,15 +22,16 @@
             <tbody>
                 {% for client in clients %}
                     <tr>
-                        <td>{{ client.id }}</td>
-                        <td>{{ client.name }}</td>
-                        <td>{{ client.ip_address }}</td>
-                        <td>{{ client.mac_address }}</td>
-                       
+                        <td>{{ client[0] }}</td>
+                        <td>{{ client[1] }}</td>
+                        <td>{{ client[2] }}</td>
+                        <td>{{ client[3] }}</td>
+                        <td>{{ client[4] }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
+        <a href="/"><button class="btn btn-primary">Back</button></a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

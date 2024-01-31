@@ -1,0 +1,12 @@
+pyproject.toml
+setup.py
+flask_auth_app.egg-info/PKG-INFO
+flask_auth_app.egg-info/SOURCES.txt
+flask_auth_app.egg-info/dependency_links.txt
+flask_auth_app.egg-info/not-zip-safe
+flask_auth_app.egg-info/requires.txt
+flask_auth_app.egg-info/top_level.txt
+project/__init__.py
+project/auth.py
+project/main.py
+project/models.py

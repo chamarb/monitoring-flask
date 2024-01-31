@@ -20,6 +20,9 @@ RUN apt-get install -y pkg-config
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Install Flask authentication app as an editable package
+RUN pip install --no-cache-dir -e /app/flask_auth_app
+
 # Run the web service on container startup
 CMD python3 main.py
 

@@ -16,33 +16,33 @@
     <div class="container mt-5">
         <h1 class="mb-4">Client Details</h1>
 
-        <h2>{{ client[1] }}</h2> {# Assuming index 1 corresponds to the 'name' field in the tuple #}
+        <h2>{{ client.name }}</h2>
 
         <table class="table">
             <tbody>
                 <tr>
                     <th scope="row">ID</th>
-                    <td>{{ client[0] }}</td> {# Accessing the first element which is 'id' #}
+                    <td>{{ client.id }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Name</th>
-                    <td>{{ client[1] }}</td> {# Accessing the second element which is 'name' #}
+                    <td>{{ client.name }}</td>
                 </tr>
                 <tr>
                     <th scope="row">IP Address</th>
-                    <td>{{ client[2] }}</td> {# Assuming index 2 corresponds to the 'ip' field in the tuple #}
+                    <td>{{ client.ip }}</td>
                 </tr>
                 <tr>
                     <th scope="row">MAC Address</th>
-                    <td>{{ client[3] }}</td> {# Assuming index 3 corresponds to the 'mac' field in the tuple #}
+                    <td>{{ client.mac }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Longitude</th>
-                    <td>{{ client[4] }}</td> {# Assuming index 4 corresponds to the 'longitude' field in the tuple #}
+                    <td>{{ client.longitude }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Latitude</th>
-                    <td>{{ client[5] }}</td> {# Assuming index 5 corresponds to the 'latitude' field in the tuple #}
+                    <td>{{ client.latitude }}</td>
                 </tr>
             </tbody>
         </table>

@@ -92,11 +92,19 @@ def register():
     return render_template('register.html')
 
 # Prediction Routes
-@app.route('/prediction/<city_name>')
-def predict(city_name):
+
+
+import requests
+import json
+
+import requests
+
+@app.route('/prediction/<location>')
+def predict(location):
     openweathermap_api_key = 'bd5e378503939ddaee76f12ad7a97608'
-    prediction_results = perform_prediction(city_name, openweathermap_api_key)
-    return render_template('prediction.html', city_name=city_name, prediction_results=prediction_results)
+    prediction_results = perform_prediction(location, openweathermap_api_key)
+    return render_template('prediction.html', city_name=location, prediction_results=prediction_results)
+    
 
 
 
@@ -104,7 +112,7 @@ def predict(city_name):
 def admin_dashboard():
     # Fetch list of end devices and IoT devices
     end_devices = IotDao.getAllEndDevices()
-    iot_devices = IotDao.getAllTemp()
+    iot_devices = IotDao.getAllIoTData()
 
     return render_template('admin_dashboard.html', end_devices=end_devices, iot_devices=iot_devices)
 

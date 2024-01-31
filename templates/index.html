@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoring App Based Flask</title>
+    <title>Esisa Monitoring using Flask MQTT and SNMP</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -70,7 +70,7 @@
                 <li><a href="{{ url_for('admin_dashboard') }}">Go to Admin Dashboard</a></li>
                 <li><a href="{{ url_for('list_clients') }}">List IOT Devices</a></li>
                 <li><a href="{{ url_for('list_end_devices') }}">List End Devices</a></li>
-                <li><a href="{{ url_for('predict', city_name='YourCity') }}">Prediction</a></li>
+                <li><a href="{{ url_for('predict', location='New York') }}">Predict Weather</a></li>
             </ul>
         </nav>
     </div>

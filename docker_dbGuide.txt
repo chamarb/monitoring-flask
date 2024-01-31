@@ -30,6 +30,7 @@ INSERT INTO t_iot_device (mac, temp) VALUES
 
 #to push in github 
 git push -u origin main  
+git push -u origin main --force
 
 # for flask auth app :
 ->cd flask_auth_app
